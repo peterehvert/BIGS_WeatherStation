@@ -6,6 +6,7 @@
 
 
 // peters first commit
+// testing new branch
 int maxHum = 60;
 int maxTemp = 40;
 
