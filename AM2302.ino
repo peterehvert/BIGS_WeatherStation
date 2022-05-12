@@ -4,6 +4,8 @@
 #define DHTTYPE DHT22   // DHT 22  (AM2302)
 #define fan 4
 
+
+// peters first commit
 int maxHum = 60;
 int maxTemp = 40;
 
