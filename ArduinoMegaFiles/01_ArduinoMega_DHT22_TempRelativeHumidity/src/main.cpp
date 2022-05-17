@@ -1,24 +1,24 @@
-#include "DHT.h"
+#include <Arduino.h>
+#include <DHT.h>
 
-#define DHTPIN 2     // what pin we're connected to
+#define DHTPIN 22     // what pin we're connected to
 #define DHTTYPE DHT22   // DHT 22  (AM2302)
-#define fan 4
+// #define fan 4
 
-
-// peters first commit
-// testing new branch
 int maxHum = 60;
 int maxTemp = 40;
 
 DHT dht(DHTPIN, DHTTYPE);
 
 void setup() {
-  pinMode(fan, OUTPUT);
+  // put your setup code here, to run once:
+  // pinMode(fan, OUTPUT);
   Serial.begin(9600); 
   dht.begin();
 }
 
 void loop() {
+  // put your main code here, to run repeatedly:
   // Wait a few seconds between measurements.
   delay(2000);
 
@@ -34,12 +34,14 @@ void loop() {
     return;
   }
   
+  /*
   if(h > maxHum || t > maxTemp) {
       digitalWrite(fan, HIGH);
   } else {
      digitalWrite(fan, LOW); 
   }
-  
+  */
+ 
   Serial.print("Humidity: "); 
   Serial.print(h);
   Serial.print(" %\t");
