@@ -4,15 +4,22 @@
 #include <MHZ19_uart.h>
 
 // Define the output pins
-const int rx_pin = 51;
+// Connect the Sensor Rx (orange cable) to Arduino Mega pin 50
+// Connect the Sensor Tx (blue cable) to Arduino Mega pin 51
+//WORKS
+//const int tx_pin = 50;	
+//const int rx_pin = 51;
+//DOESNT work
 const int tx_pin = 50;	
+const int rx_pin = 51;
+
 
 MHZ19_uart mhz19;
 
 // put your setup code here, to run once:
 void setup() {
-
   Serial.begin(9600);
+  //Serial.begin(9600);
 
   // Initialize CO2 reader
   mhz19.begin(rx_pin, tx_pin);

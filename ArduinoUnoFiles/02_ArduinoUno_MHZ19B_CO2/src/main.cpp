@@ -4,8 +4,8 @@
 #include <MHZ19_uart.h>
 
 // Define the output pins
-const int rx_pin = 4;
-const int tx_pin = 5;	
+const int rx_pin = 2;
+const int tx_pin = 3;	
 
 MHZ19_uart mhz19;
 
